@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.Models", "Portfolio.Models\Portfolio.Models.csproj", "{F671C245-5710-497E-83B8-DDD03681079C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Models", "Portfolio.Models\Portfolio.Models.csproj", "{F671C245-5710-497E-83B8-DDD03681079C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.DTOs", "Portfolio.DTOs\Portfolio.DTOs.csproj", "{09ED2051-9699-4F8E-BC03-688A3C00E23F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.DataAccess", "Portfolio.DataAccess\Portfolio.DataAccess.csproj", "{FD139D43-5E3D-41E4-B202-62017D5E343A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.DataAccess", "Portfolio.DataAccess\Portfolio.DataAccess.csproj", "{FD139D43-5E3D-41E4-B202-62017D5E343A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.BusinessLogic", "Portfolio.BusinessLogic\Portfolio.BusinessLogic.csproj", "{92AFF157-45D5-473C-9FD0-13297C03FFDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.BusinessLogic", "Portfolio.BusinessLogic\Portfolio.BusinessLogic.csproj", "{92AFF157-45D5-473C-9FD0-13297C03FFDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.WebUI", "Portfolio.WebUI\Portfolio.WebUI.csproj", "{3BAD7F1B-937D-45B4-9C6E-3CD54368D619}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.WebUI", "Portfolio.WebUI\Portfolio.WebUI.csproj", "{3BAD7F1B-937D-45B4-9C6E-3CD54368D619}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.Utility", "Portfolio.Utility\Portfolio.Utility.csproj", "{36165C91-CF68-42FD-B86B-760BA25DB4AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{F671C245-5710-497E-83B8-DDD03681079C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F671C245-5710-497E-83B8-DDD03681079C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F671C245-5710-497E-83B8-DDD03681079C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09ED2051-9699-4F8E-BC03-688A3C00E23F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09ED2051-9699-4F8E-BC03-688A3C00E23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09ED2051-9699-4F8E-BC03-688A3C00E23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09ED2051-9699-4F8E-BC03-688A3C00E23F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FD139D43-5E3D-41E4-B202-62017D5E343A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD139D43-5E3D-41E4-B202-62017D5E343A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD139D43-5E3D-41E4-B202-62017D5E343A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{3BAD7F1B-937D-45B4-9C6E-3CD54368D619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BAD7F1B-937D-45B4-9C6E-3CD54368D619}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BAD7F1B-937D-45B4-9C6E-3CD54368D619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36165C91-CF68-42FD-B86B-760BA25DB4AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36165C91-CF68-42FD-B86B-760BA25DB4AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36165C91-CF68-42FD-B86B-760BA25DB4AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36165C91-CF68-42FD-B86B-760BA25DB4AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

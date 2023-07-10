@@ -1599,6 +1599,16 @@
         "runtime": {
           "bin/placeholder/Portfolio.Models.dll": {}
         }
+      },
+      "Portfolio.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Portfolio.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Portfolio.Utility.dll": {}
+        }
       }
     }
   },
@@ -4316,6 +4326,11 @@
       "type": "project",
       "path": "../Portfolio.Models/Portfolio.Models.csproj",
       "msbuildProject": "../Portfolio.Models/Portfolio.Models.csproj"
+    },
+    "Portfolio.Utility/1.0.0": {
+      "type": "project",
+      "path": "../Portfolio.Utility/Portfolio.Utility.csproj",
+      "msbuildProject": "../Portfolio.Utility/Portfolio.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4325,7 +4340,8 @@
       "Microsoft.EntityFrameworkCore >= 7.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.8",
-      "Portfolio.Models >= 1.0.0"
+      "Portfolio.Models >= 1.0.0",
+      "Portfolio.Utility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4357,6 +4373,9 @@
           "projectReferences": {
             "C:\\Users\\rayed\\OneDrive\\Desktop\\Portfolio\\Portfolio.Models\\Portfolio.Models.csproj": {
               "projectPath": "C:\\Users\\rayed\\OneDrive\\Desktop\\Portfolio\\Portfolio.Models\\Portfolio.Models.csproj"
+            },
+            "C:\\Users\\rayed\\OneDrive\\Desktop\\Portfolio\\Portfolio.Utility\\Portfolio.Utility.csproj": {
+              "projectPath": "C:\\Users\\rayed\\OneDrive\\Desktop\\Portfolio\\Portfolio.Utility\\Portfolio.Utility.csproj"
             }
           }
         }

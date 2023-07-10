@@ -8,6 +8,7 @@ namespace Portfolio.DataAccess.Interfaces
 		Task CreateAsync(T entity);
 		Task<List<T>> GetAllAsync();
 		Task<T> FindAsync(object id);
+		Task<T> GetByFilterAsync(Expression<Func<T, bool>> filter, bool asNoTracking = false);
 		void Update(T entity, T unchanged);
 		void Remove(T entity);
 		void RemoveRange(List<T> entities);

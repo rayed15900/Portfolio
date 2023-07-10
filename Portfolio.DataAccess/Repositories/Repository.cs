@@ -5,6 +5,7 @@ using Portfolio.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,6 +39,11 @@ namespace Portfolio.DataAccess.Repositories
 		public async Task<T> FindAsync(object id)
 		{
 			return await _context.Set<T>().FindAsync(id);
+		}
+
+		public async Task<T> GetByFilterAsync(Expression<Func<T, bool>> filter, bool asNoTracking = false)
+		{
+			return !asNoTracking ? await _context.Set<T>().AsNoTracking().SingleOrDefaultAsync(filter) : await _context.Set<T>().SingleOrDefaultAsync(filter);
 		}
 
 		#endregion
