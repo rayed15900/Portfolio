@@ -1,9 +1,12 @@
+using Portfolio.BusinessLogic.DependencyExtension;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-
+// Dependency Injection Resolver from BusinessLogic layer
+builder.Services.AddDependencies(builder.Configuration);
 
 var app = builder.Build();
 
