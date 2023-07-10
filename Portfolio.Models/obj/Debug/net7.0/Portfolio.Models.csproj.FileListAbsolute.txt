@@ -1,0 +1,12 @@
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\bin\Debug\net7.0\Portfolio.Models.deps.json
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\bin\Debug\net7.0\Portfolio.Models.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\bin\Debug\net7.0\Portfolio.Models.pdb
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\obj\Debug\net7.0\Portfolio.Models.csproj.AssemblyReference.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\obj\Debug\net7.0\Portfolio.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\obj\Debug\net7.0\Portfolio.Models.AssemblyInfoInputs.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\obj\Debug\net7.0\Portfolio.Models.AssemblyInfo.cs
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\obj\Debug\net7.0\Portfolio.Models.csproj.CoreCompileInputs.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\obj\Debug\net7.0\Portfolio.Models.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\obj\Debug\net7.0\refint\Portfolio.Models.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\obj\Debug\net7.0\Portfolio.Models.pdb
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.Models\obj\Debug\net7.0\ref\Portfolio.Models.dll

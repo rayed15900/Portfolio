@@ -29,3 +29,12 @@ C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\obj\Debug\net7.0\refin
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\obj\Debug\net7.0\Portfolio.WebUI.pdb
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\obj\Debug\net7.0\Portfolio.WebUI.genruntimeconfig.cache
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\obj\Debug\net7.0\ref\Portfolio.WebUI.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Humanizer.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\obj\Debug\net7.0\Portfolio.WebUI.csproj.CopyComplete

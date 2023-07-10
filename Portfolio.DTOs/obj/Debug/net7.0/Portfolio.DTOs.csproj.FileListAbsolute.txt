@@ -1,0 +1,12 @@
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\bin\Debug\net7.0\Portfolio.DTOs.deps.json
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\bin\Debug\net7.0\Portfolio.DTOs.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\bin\Debug\net7.0\Portfolio.DTOs.pdb
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\obj\Debug\net7.0\Portfolio.DTOs.csproj.AssemblyReference.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\obj\Debug\net7.0\Portfolio.DTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\obj\Debug\net7.0\Portfolio.DTOs.AssemblyInfoInputs.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\obj\Debug\net7.0\Portfolio.DTOs.AssemblyInfo.cs
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\obj\Debug\net7.0\Portfolio.DTOs.csproj.CoreCompileInputs.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\obj\Debug\net7.0\Portfolio.DTOs.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\obj\Debug\net7.0\refint\Portfolio.DTOs.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\obj\Debug\net7.0\Portfolio.DTOs.pdb
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DTOs\obj\Debug\net7.0\ref\Portfolio.DTOs.dll

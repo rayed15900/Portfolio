@@ -1,0 +1,12 @@
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\bin\Debug\net7.0\Portfolio.BusinessLogic.deps.json
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\bin\Debug\net7.0\Portfolio.BusinessLogic.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\bin\Debug\net7.0\Portfolio.BusinessLogic.pdb
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\obj\Debug\net7.0\Portfolio.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\obj\Debug\net7.0\Portfolio.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\obj\Debug\net7.0\Portfolio.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\obj\Debug\net7.0\Portfolio.BusinessLogic.AssemblyInfo.cs
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\obj\Debug\net7.0\Portfolio.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\obj\Debug\net7.0\Portfolio.BusinessLogic.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\obj\Debug\net7.0\refint\Portfolio.BusinessLogic.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\obj\Debug\net7.0\Portfolio.BusinessLogic.pdb
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\obj\Debug\net7.0\ref\Portfolio.BusinessLogic.dll

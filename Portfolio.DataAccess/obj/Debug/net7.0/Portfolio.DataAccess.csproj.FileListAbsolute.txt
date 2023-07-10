@@ -1,0 +1,17 @@
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\bin\Debug\net7.0\Portfolio.DataAccess.deps.json
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\bin\Debug\net7.0\Portfolio.DataAccess.runtimeconfig.json
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\bin\Debug\net7.0\Portfolio.DataAccess.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\bin\Debug\net7.0\Portfolio.DataAccess.pdb
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\bin\Debug\net7.0\Portfolio.Models.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\bin\Debug\net7.0\Portfolio.Models.pdb
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\Portfolio.DataAccess.csproj.AssemblyReference.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\Portfolio.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\Portfolio.DataAccess.AssemblyInfoInputs.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\Portfolio.DataAccess.AssemblyInfo.cs
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\Portfolio.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\Portfolio.DataAccess.csproj.CopyComplete
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\Portfolio.DataAccess.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\refint\Portfolio.DataAccess.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\Portfolio.DataAccess.pdb
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\Portfolio.DataAccess.genruntimeconfig.cache
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\ref\Portfolio.DataAccess.dll
