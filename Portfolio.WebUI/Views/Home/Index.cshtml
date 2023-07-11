@@ -1,8 +1,18 @@
-﻿@{
+﻿@using Portfolio.WebUI.ViewModel;
+@model HomeViewModel;
+@{
     ViewData["Title"] = "Home Page";
+    var skills = Model.Skills;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@if (skills != null)
+{
+    <div>
+        @foreach (var s in skills)
+        {
+            <div>
+                <h3>@s.Name</h3>
+            </div>
+        }
+    </div>
+}

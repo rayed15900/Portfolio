@@ -15,3 +15,5 @@ C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\bin\Debug\net7
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\bin\Debug\net7.0\Portfolio.DataAccess.pdb
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\bin\Debug\net7.0\Portfolio.Models.pdb
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\obj\Debug\net7.0\Portfolio.BusinessLogic.csproj.CopyComplete
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\bin\Debug\net7.0\Portfolio.Utility.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.BusinessLogic\bin\Debug\net7.0\Portfolio.Utility.pdb

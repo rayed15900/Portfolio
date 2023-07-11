@@ -13,7 +13,8 @@
           "Microsoft.EntityFrameworkCore": "7.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.8",
-          "Portfolio.Models": "1.0.0"
+          "Portfolio.Models": "1.0.0",
+          "Portfolio.Utility": "1.0.0"
         },
         "runtime": {
           "Portfolio.DataAccess.dll": {}
@@ -1010,6 +1011,11 @@
         "runtime": {
           "Portfolio.Models.dll": {}
         }
+      },
+      "Portfolio.Utility/1.0.0": {
+        "runtime": {
+          "Portfolio.Utility.dll": {}
+        }
       }
     }
   },
@@ -1671,6 +1677,11 @@
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
     "Portfolio.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Portfolio.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

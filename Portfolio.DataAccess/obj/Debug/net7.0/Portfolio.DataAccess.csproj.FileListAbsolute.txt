@@ -15,3 +15,5 @@ C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\Portfolio.DataAccess.pdb
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\Portfolio.DataAccess.genruntimeconfig.cache
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\obj\Debug\net7.0\ref\Portfolio.DataAccess.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\bin\Debug\net7.0\Portfolio.Utility.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.DataAccess\bin\Debug\net7.0\Portfolio.Utility.pdb

@@ -85,3 +85,8 @@ C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Portf
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Portfolio.BusinessLogic.pdb
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Portfolio.DataAccess.pdb
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Portfolio.Models.pdb
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Portfolio.Utility.dll
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Portfolio.Utility.pdb

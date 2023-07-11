@@ -1,32 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Portfolio.WebUI.Models;
-using System.Diagnostics;
+using Portfolio.BusinessLogic.Interfaces;
+using Portfolio.WebUI.ViewModel;
 
 namespace Portfolio.WebUI.Controllers
 {
 	public class HomeController : Controller
 	{
-		private readonly ILogger<HomeController> _logger;
+		private readonly ISkillService _skillService;
 
-		public HomeController(ILogger<HomeController> logger)
+		public HomeController(ISkillService skillService)
 		{
-			_logger = logger;
+			_skillService = skillService;
 		}
 
-		public IActionResult Index()
+		public async Task<IActionResult> Index()
 		{
-			return View();
-		}
+			var model = new HomeViewModel();
 
-		public IActionResult Privacy()
-		{
-			return View();
-		}
+			var responseSkill = await _skillService.GetAllSkillAsync();
+			model.Skills = responseSkill.Data;
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-		public IActionResult Error()
-		{
-			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+			return View(model);
 		}
 	}
 }

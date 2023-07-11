@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Portfolio.BusinessLogic\Portfolio.BusinessLogic.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

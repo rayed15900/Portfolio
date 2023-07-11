@@ -1,12 +1,31 @@
+using AutoMapper;
 using Portfolio.BusinessLogic.DependencyExtension;
+using Portfolio.BusinessLogic.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Dependency Injection Resolver from BusinessLogic layer
+#region All Dependency Injection from BusinessLogic layer
+
 builder.Services.AddDependencies(builder.Configuration);
+
+#endregion
+
+#region Auto Mapper
+
+var profiles = ProfileHelper.GetProfiles();
+
+var configuration = new MapperConfiguration(opt =>
+{
+    opt.AddProfiles(profiles);
+});
+
+var mapper = configuration.CreateMapper();
+builder.Services.AddSingleton(mapper);
+
+#endregion
 
 var app = builder.Build();
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vSVkdrCw78yDHXSebLy0QIhsnPKt0nTlRo9rcNj27XufpLgjrwKpeFsCwWTiWn01FjSip0lZFKV0o1Y1CoVicg==",
+  "dgSpecHash": "oSOKidqBYHxLadezsXNEMdOlq5zcFaJ39TG80RzLIpBHM5FS6iezoebj+kSxTrr2bTukxTXuI1DooCGKa2+PzA==",
   "success": true,
   "projectFilePath": "C:\\Users\\rayed\\OneDrive\\Desktop\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\rayed\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\rayed\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\rayed\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\rayed\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
     "C:\\Users\\rayed\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\rayed\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.1.1\\microsoft.aspnetcore.authentication.2.1.1.nupkg.sha512",
     "C:\\Users\\rayed\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.1\\microsoft.aspnetcore.authentication.abstractions.2.1.1.nupkg.sha512",
