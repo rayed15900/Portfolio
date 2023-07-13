@@ -1,6 +1,8 @@
-﻿namespace Portfolio.Models
+﻿using Portfolio.Models.Base;
+
+namespace Portfolio.Models
 {
-	public class Skill : BaseEntity
+    public class Skill : BaseModel
 	{
         public string Name { get; set; }
 	}

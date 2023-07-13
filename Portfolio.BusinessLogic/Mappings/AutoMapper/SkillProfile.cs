@@ -9,8 +9,8 @@ namespace Portfolio.BusinessLogic.Mappings.AutoMapper
 		public SkillProfile()
 		{
 			CreateMap<Skill, SkillCreateDTO>().ReverseMap();
-			CreateMap<Skill, SkillUpdateDTO>().ReverseMap();
 			CreateMap<Skill, SkillListDTO>().ReverseMap();
+			CreateMap<Skill, SkillUpdateDTO>().ReverseMap();
 		}
 	}
 }

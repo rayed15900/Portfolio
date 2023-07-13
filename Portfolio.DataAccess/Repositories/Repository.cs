@@ -1,17 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Portfolio.DataAccess.Context;
 using Portfolio.DataAccess.Interfaces;
-using Portfolio.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Portfolio.Models.Base;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Portfolio.DataAccess.Repositories
 {
-	public class Repository<T> : IRepository<T> where T : BaseEntity
+    public class Repository<T> : IRepository<T> where T : BaseModel
 	{
 		private readonly PortfolioContext _context;
 
@@ -39,11 +34,6 @@ namespace Portfolio.DataAccess.Repositories
 		public async Task<T> FindAsync(object id)
 		{
 			return await _context.Set<T>().FindAsync(id);
-		}
-
-		public async Task<T> GetByFilterAsync(Expression<Func<T, bool>> filter, bool asNoTracking = false)
-		{
-			return !asNoTracking ? await _context.Set<T>().AsNoTracking().SingleOrDefaultAsync(filter) : await _context.Set<T>().SingleOrDefaultAsync(filter);
 		}
 
 		#endregion

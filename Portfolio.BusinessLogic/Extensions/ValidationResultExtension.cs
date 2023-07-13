@@ -11,8 +11,8 @@ namespace Portfolio.BusinessLogic.Extensions
 			{
 				errors.Add(new()
 				{
-					ErrorMessage = error.ErrorMessage,
-					PropertyName = error.PropertyName
+					PropertyName = error.PropertyName,
+					ErrorMessage = error.ErrorMessage
 				});
 			}
 			return errors;

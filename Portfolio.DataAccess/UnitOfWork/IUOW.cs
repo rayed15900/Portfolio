@@ -1,11 +1,11 @@
 ﻿using Portfolio.DataAccess.Interfaces;
-using Portfolio.Models;
+using Portfolio.Models.Base;
 
 namespace Portfolio.DataAccess.UnitOfWork
 {
-	public interface IUOW
+    public interface IUOW
 	{
-		IRepository<T> GetRepository<T>() where T : BaseEntity;
+		IRepository<T> GetRepository<T>() where T : BaseModel;
 		Task SaveChangesAsync();
 	}
 }

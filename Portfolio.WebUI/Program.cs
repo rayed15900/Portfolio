@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-#region All Dependency Injection from BusinessLogic layer
+#region Dependency Injection Resolver from BusinessLogic layer
 
 builder.Services.AddDependencies(builder.Configuration);
 

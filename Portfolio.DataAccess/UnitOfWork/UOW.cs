@@ -1,11 +1,11 @@
 ﻿using Portfolio.DataAccess.Context;
 using Portfolio.DataAccess.Interfaces;
 using Portfolio.DataAccess.Repositories;
-using Portfolio.Models;
+using Portfolio.Models.Base;
 
 namespace Portfolio.DataAccess.UnitOfWork
 {
-	public class UOW : IUOW
+    public class UOW : IUOW
 	{
 		private readonly PortfolioContext _context;
 
@@ -14,7 +14,7 @@ namespace Portfolio.DataAccess.UnitOfWork
 			_context = context;
 		}
 
-		public IRepository<T> GetRepository<T>() where T : BaseEntity
+		public IRepository<T> GetRepository<T>() where T : BaseModel
 		{
 			return new Repository<T>(_context);
 		}

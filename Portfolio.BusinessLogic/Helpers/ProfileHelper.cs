@@ -7,7 +7,6 @@ namespace Portfolio.BusinessLogic.Helpers
     {
         public static List<Profile> GetProfiles()
         {
-
             return new List<Profile>
             {
                 new SkillProfile()

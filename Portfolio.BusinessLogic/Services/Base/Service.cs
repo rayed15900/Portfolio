@@ -4,16 +4,16 @@ using Portfolio.BusinessLogic.DTOs.Interfaces;
 using Portfolio.BusinessLogic.Extensions;
 using Portfolio.BusinessLogic.Interfaces.Base;
 using Portfolio.DataAccess.UnitOfWork;
-using Portfolio.Models;
+using Portfolio.Models.Base;
 using Portfolio.Utility;
 
 namespace Portfolio.BusinessLogic.Services.Base
 {
-	public class Service<CreateDTO, UpdateDTO, ListDTO, T> : IService<CreateDTO, UpdateDTO, ListDTO, T>
+    public class Service<CreateDTO, UpdateDTO, ListDTO, T> : IService<CreateDTO, UpdateDTO, ListDTO, T>
 		where CreateDTO : class, IDTO, new()
 		where UpdateDTO : class, IUpdateDTO, new()
 		where ListDTO : class, IDTO, new()
-		where T : BaseEntity
+		where T : BaseModel
 	{
 		private readonly IMapper _mapper;
 		private readonly IUOW _uow;
@@ -50,7 +50,7 @@ namespace Portfolio.BusinessLogic.Services.Base
 
 		public async Task<IResponse<IDTO>> GetByIdAsync<IDTO>(int id)
 		{
-			var data = await _uow.GetRepository<T>().GetByFilterAsync(x => x.Id == id);
+			var data = await _uow.GetRepository<T>().FindAsync(id);
 			if (data == null)
 				return new Response<IDTO>(ResponseType.NotFound, $"Id: {id} is not found");
 			var dto = _mapper.Map<IDTO>(data);

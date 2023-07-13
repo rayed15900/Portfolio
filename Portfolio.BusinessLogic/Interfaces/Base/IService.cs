@@ -1,14 +1,14 @@
 ﻿using Portfolio.BusinessLogic.DTOs.Interfaces;
-using Portfolio.Models;
+using Portfolio.Models.Base;
 using Portfolio.Utility;
 
 namespace Portfolio.BusinessLogic.Interfaces.Base
 {
-	public interface IService<CreateDTO, UpdateDTO, ListDTO, T>
+    public interface IService<CreateDTO, UpdateDTO, ListDTO, T>
 		where CreateDTO : class, IDTO, new()
 		where UpdateDTO : class, IUpdateDTO, new()
 		where ListDTO : class, IDTO, new()
-		where T : BaseEntity
+		where T : BaseModel
 	{
 		Task<IResponse<CreateDTO>> CreateAsync(CreateDTO dto);
 		Task<IResponse<List<ListDTO>>> GetAllAsync();
