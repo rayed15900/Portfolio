@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.BusinessLogic.DTOs.UserDTO;
 using Portfolio.BusinessLogic.Interfaces;
@@ -11,16 +12,19 @@ namespace Portfolio.WebUI.Controllers
 	[AutoValidateAntiforgeryToken]
 	public class AccountController : Controller
     {
-        private readonly IUserService _userService;
-        private UserManager<User> _userManager;
+		private readonly IValidator<UserLoginDTO> _loginDtoValidator;
+		private readonly IValidator<UserRegisterDTO> _registerDtoValidator;
+		private UserManager<User> _userManager;
         private SignInManager<User> _signInManager;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IUserService userService)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IValidator<UserLoginDTO> loginDtoValidator, IValidator<UserRegisterDTO> registerDtoValidator)
         {
-            _userManager = userManager;
+			_userManager = userManager;
             _signInManager = signInManager;
-            _userService = userService;
-        }
+			_loginDtoValidator = loginDtoValidator;
+            _registerDtoValidator = registerDtoValidator;
+
+		}
 
         #region register 
 
@@ -33,12 +37,47 @@ namespace Portfolio.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserRegisterDTO dto)
         {
-            if (!_userService.RegisterisValid(dto))
-            {
-				return View(dto);
-            }
+			var validationResult = await _registerDtoValidator.ValidateAsync(dto);
 
-            var user = new User()
+			if (!validationResult.IsValid)
+			{
+				ModelState.Remove("Name");
+				ModelState.Remove("Email");
+				ModelState.Remove("Username");
+				ModelState.Remove("Password");
+				ModelState.Remove("ConfirmPassword");
+
+				foreach (var error in validationResult.Errors)
+				{
+					if (error.PropertyName == "Name")
+					{
+						ModelState.AddModelError("Name", error.ErrorMessage);
+					}
+					else if (error.PropertyName == "Email")
+					{
+						ModelState.AddModelError("Email", error.ErrorMessage);
+					}
+					else if (error.PropertyName == "Username")
+					{
+						ModelState.AddModelError("Username", error.ErrorMessage);
+					}
+					else if (error.PropertyName == "Password")
+					{
+						ModelState.AddModelError("Password", error.ErrorMessage);
+					}
+					else if (error.PropertyName == "ConfirmPassword")
+					{
+						ModelState.AddModelError("ConfirmPassword", error.ErrorMessage);
+					}
+					else
+					{
+						ModelState.AddModelError("", error.ErrorMessage);
+					}
+				}
+				return View(dto);
+			}
+
+			var user = new User()
             {
                 Name = dto.Name.Trim(),
                 Email = dto.Email.Trim(),
@@ -52,7 +91,7 @@ namespace Portfolio.WebUI.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-			TempData["alerts"] = "Inputs are not valid";
+			TempData["alerts"] = "Registration credentials invalid";
 			return View(dto);
         }
 
@@ -62,16 +101,16 @@ namespace Portfolio.WebUI.Controllers
 
         public async Task<IActionResult> Login()
         {
-            if (!_userManager.Users.Any())
-            {
-                var user = new User()
-                {
-                    Name = "Admin Panel",
-                    UserName = "admin",
-                };
+            //if (!_userManager.Users.Any())
+            //{
+            //    var user = new User()
+            //    {
+            //        Name = "Admin Panel",
+            //        UserName = "admin",
+            //    };
 
-                await _userManager.CreateAsync(user, "1234");
-            }
+            //    await _userManager.CreateAsync(user, "1234");
+            //}
             var dto = new UserLoginDTO();
             return View(dto);
         }
@@ -79,18 +118,37 @@ namespace Portfolio.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(UserLoginDTO dto)
         {
-            if (!_userService.LoginisValid(dto))
-            {
-                
-                return View(dto);
-            }
+			var validationResult = await _loginDtoValidator.ValidateAsync(dto);
+
+			if (!validationResult.IsValid)
+			{
+				ModelState.Remove("Username");
+				ModelState.Remove("Password");
+
+				foreach (var error in validationResult.Errors)
+				{
+					if (error.PropertyName == "Username")
+					{
+						ModelState.AddModelError("Username", error.ErrorMessage);
+					}
+					else if (error.PropertyName == "Password")
+					{
+						ModelState.AddModelError("Password", error.ErrorMessage);
+					}
+					else
+					{
+						ModelState.AddModelError("", error.ErrorMessage);
+					}
+				}
+				return View(dto);
+			}
 
             var user = await _userManager.FindByNameAsync(dto.Username);
 
             if (user == null)
             {
-				TempData["alerts"] = "User not found";
-				return View(dto);
+                TempData["alerts"] = "User not found.";
+                return View(dto);
             }
 
             var result = await _signInManager.PasswordSignInAsync(user, dto.Password, true, true);
@@ -100,7 +158,7 @@ namespace Portfolio.WebUI.Controllers
                 return RedirectToAction("Index", "Dashboard");
             }
 
-            TempData["alerts"] = "Inputs are not valid";
+            TempData["alerts"] = "Login credentials invalid";
             return View(dto);
         }
 

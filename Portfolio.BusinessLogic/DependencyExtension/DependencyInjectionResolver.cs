@@ -29,7 +29,6 @@ namespace Portfolio.BusinessLogic.DependencyExtension
 			services.AddScoped<IUOW, UOW>();
 
             // Services
-            services.AddScoped<IUserService, UserService>();
             services.AddScoped<ISkillService, SkillService>();
 
             // Validators
