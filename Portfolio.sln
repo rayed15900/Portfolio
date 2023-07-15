@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.BusinessLogic", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.WebUI", "Portfolio.WebUI\Portfolio.WebUI.csproj", "{3BAD7F1B-937D-45B4-9C6E-3CD54368D619}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.Utility", "Portfolio.Utility\Portfolio.Utility.csproj", "{36165C91-CF68-42FD-B86B-760BA25DB4AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Utility", "Portfolio.Utility\Portfolio.Utility.csproj", "{36165C91-CF68-42FD-B86B-760BA25DB4AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

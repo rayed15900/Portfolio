@@ -19,5 +19,25 @@ namespace Portfolio.WebUI.Extension
             }
             return controller.View(response.Data);
         }
+
+        //public static string ViewAlert(this Controller controller, AlertType alert = AlertType.Info, string alertMessage = "Info")
+        //{
+        //    if (alert == AlertType.Success)
+        //    {
+        //        return $"<span class='text-danger'>{alertMessage}</span>";
+        //    }
+        //    else if (alert == AlertType.Warning)
+        //    {
+        //        return $"<span class='text-danger'>{alertMessage}</span>";
+        //    }
+        //    else if (alert == AlertType.Error)
+        //    {
+        //        return $"<span class='text-danger'>{alertMessage}</span>";
+        //    }
+        //    else
+        //    {
+        //        return $"<span class='text-danger'>{alertMessage}</span>";
+        //    }
+        //}
     }
 }

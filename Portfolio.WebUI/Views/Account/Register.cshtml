@@ -1,0 +1,67 @@
+﻿@using Portfolio.BusinessLogic.DTOs.UserDTO;
+@model UserRegisterDTO
+
+<div class="container">
+	<div class="row justify-content-center align-items-center">
+		<div class="col-7">
+			<div class="card-body p-5">
+				<div class="row">
+					<h3 class="col-12 mb-3 text-center">Registration</h3>
+				</div>
+				<form asp-controller="Account" asp-action="Register" method="post" validate>
+					<div class="row mb-3">
+						<div class="col-6">
+							<div class="form-outline">
+								<label asp-for="@Model.Name" class="form-label"></label>
+								<input asp-for="@Model.Name" class="form-control" />
+								<span asp-validation-for="@Model.Name" class="text-danger" style="font-size: 14px;"></span>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-outline">
+								<label asp-for="@Model.Username" class="form-label"></label>
+								<input asp-for="@Model.Username" class="form-control" />
+								<span asp-validation-for="@Model.Username" class="text-danger" style="font-size: 14px;"></span>
+							</div>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						
+						<div class="col-6">
+							<div class="form-outline">
+								<label asp-for="@Model.Password" class="form-label"></label>
+								<input asp-for="@Model.Password" type="password" class="form-control" />
+								<span asp-validation-for="@Model.Password" class="text-danger" style="font-size: 14px;"></span>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-outline">
+								<label asp-for="@Model.ConfirmPassword" class="form-label">Confirm Password</label>
+								<input asp-for="@Model.ConfirmPassword" type="password" class="form-control" />
+								<span asp-validation-for="@Model.ConfirmPassword" class="text-danger" style="font-size: 14px;"></span>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-6 mb-3">
+							<div class="form-outline">
+								<label asp-for="@Model.Email" class="form-label"></label>
+								<input asp-for="@Model.Email" class="form-control" />
+								<span asp-validation-for="@Model.Email" class="text-danger" style="font-size: 14px;"></span>
+							</div>
+						</div>
+						<div class="text-center mb-3">
+							<input class="btn btn-outline-dark" style="width:150px; border-radius:18px;" type="submit" />
+						</div>
+						@if (TempData["alerts"] != null)
+						{
+							<div class="text-danger text-center" style="font-size: 14px;">@TempData["alerts"]</div>
+						}
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

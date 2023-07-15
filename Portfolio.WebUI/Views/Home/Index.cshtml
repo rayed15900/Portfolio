@@ -1,18 +1,4 @@
-﻿@using Portfolio.WebUI.ViewModel;
-@model HomeViewModel;
-@{
-    ViewData["Title"] = "Home Page";
-    var skills = Model.Skills;
-}
-
-@if (skills != null)
-{
-    <div>
-        @foreach (var s in skills)
-        {
-            <div>
-                <h3>@s.Name</h3>
-            </div>
-        }
-    </div>
-}
+﻿<div class="text-center mt-5">
+    <h1>Showcase your talent, inspire opportunities</h1>
+    <a class="btn btn-outline-dark mt-4" style="width:200px; border-radius:18px;" href="Account/Login">Create Portfolio</a>
+</div>
