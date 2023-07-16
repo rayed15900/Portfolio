@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Portfolio.BusinessLogic.DTOs.Interfaces;
 using Portfolio.BusinessLogic.DTOs.SkillDTOs;
 using Portfolio.BusinessLogic.Interfaces;
 using Portfolio.Models;
-using Portfolio.Utility;
-using Portfolio.WebUI.Extension;
 
 namespace Portfolio.WebUI.Controllers
 {
@@ -33,8 +33,9 @@ namespace Portfolio.WebUI.Controllers
 
         public async Task<IActionResult> Skills()
         {
-            var response = await _skillService.GetAllAsync();
-            return View(response.Data);
+            var user = await _userManager.GetUserAsync(User);
+            var dto = await _skillService.GetAllSkillsByUserIdAsync<SkillListDTO>(user.Id);
+            return View(dto);
         }
 
         public IActionResult SkillsCreate()
@@ -48,24 +49,20 @@ namespace Portfolio.WebUI.Controllers
         {
             var user = await _userManager.GetUserAsync(User);
             dto.UserId = user.Id;
+            var createdDto = await _skillService.CreateAsync(dto);
 
-            var response = await _skillService.CreateAsync(dto);
-            if (response.ResponseType == ResponseType.Success)
-            {
-                TempData["alerts"] = "Skill Created";
+            if(createdDto != null)
                 return RedirectToAction("Skills");
-            }
-            return this.ResponseValidation<SkillCreateDTO>(response);
+            return View(dto);
         }
 
         public async Task<IActionResult> SkillsUpdate(int id)
         {
-            var response = await _skillService.GetByIdAsync<SkillUpdateDTO>(id);
-            if (response.ResponseType == ResponseType.NotFound)
-            {
-                return NotFound();
-            }
-            return View(response.Data);
+            var dto = await _skillService.GetByIdAsync<SkillUpdateDTO>(id);
+            if(dto != null)
+                return View(dto);
+            TempData["notify"] = $"Skill Id: {id} not found";
+            return RedirectToAction("Skills");
         }
 
         [HttpPost]
@@ -73,19 +70,20 @@ namespace Portfolio.WebUI.Controllers
         {
             var user = await _userManager.GetUserAsync(User);
             dto.UserId = user.Id;
+            var updatedDto = await _skillService.UpdateAsync(dto);
 
-            var response = await _skillService.UpdateAsync(dto);
-            if (response.ResponseType == ResponseType.Success)
-            {
-                TempData["alerts"] = "Skill Updated";
+            if(updatedDto != null)
                 return RedirectToAction("Skills");
-            }
-            return this.ResponseValidation<SkillUpdateDTO>(response);
+            TempData["notify"] = $"Skill Id: {dto.Id} not found";
+            return View(dto);
         }
-        
+
         public async Task<IActionResult> SkillsDelete(int id)
         {
             var response = await _skillService.RemoveAsync(id);
+            if(response)
+                return RedirectToAction("Skills");
+            TempData["notify"] = $"Skill Id: {id} not found";
             return RedirectToAction("Skills");
         }
 

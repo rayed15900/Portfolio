@@ -7,8 +7,8 @@ namespace Portfolio.DataAccess.Interfaces
 	{
 		Task CreateAsync(T entity);
 		Task<List<T>> GetAllAsync();
-		Task<T> FindAsync(object id);
-		void Update(T entity, T oldEntity);
+		Task<T> GetByIdAsync(object id);
+        void Update(T entity, T oldEntity);
 		void Remove(T entity);
 	}
 }

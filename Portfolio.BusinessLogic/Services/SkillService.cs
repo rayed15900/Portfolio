@@ -5,7 +5,6 @@ using Portfolio.BusinessLogic.Interfaces;
 using Portfolio.BusinessLogic.Services.Base;
 using Portfolio.DataAccess.UnitOfWork;
 using Portfolio.Models;
-using Portfolio.Utility;
 
 namespace Portfolio.BusinessLogic.Services
 {
@@ -19,11 +18,12 @@ namespace Portfolio.BusinessLogic.Services
 			_mapper = mapper;
 		}
 
-		//public async Task<IResponse<List<SkillListDTO>>> GetAllSkillAsync()
-		//{
-		//	var data = await _uow.GetRepository<Skill>().GetAllAsync();
-		//	var skills = _mapper.Map<List<SkillListDTO>>(data);
-		//	return new Response<List<SkillListDTO>>(ResponseType.Success, skills);
-		//}
-	}
+        public async Task<List<ListDTO>> GetAllSkillsByUserIdAsync<ListDTO>(string userId)
+        {
+            var allSkills = await _uow.GetRepository<Skill>().GetAllAsync();
+            var skillsByUserId = allSkills.Where(skill => skill.UserId == userId).ToList();
+            var dtoList = _mapper.Map<List<ListDTO>>(skillsByUserId);
+            return dtoList;
+        }
+    }
 }

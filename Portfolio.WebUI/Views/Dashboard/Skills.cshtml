@@ -35,10 +35,14 @@
                     }
                     else
                     {
-                        <div class="text-secondary">No skills yet</div>
+                        <div class="text-secondary mb-2">No skills yet</div>
                     }
                 </div>
-                <a asp-controller="Dashboard" asp-action="SkillsCreate" class="btn btn-outline-dark">Add Skills</a>
+                <a asp-controller="Dashboard" asp-action="SkillsCreate" class="btn btn-outline-dark mb-3">Add Skills</a>
+                @if (TempData["notify"] != null)
+                {
+                    <div class="text-danger text-center" style="font-size: 20px;">@TempData["notify"]</div>
+                }
             </div>
         </div>
     </div>

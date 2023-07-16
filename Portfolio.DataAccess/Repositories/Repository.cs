@@ -2,7 +2,7 @@
 using Portfolio.DataAccess.Context;
 using Portfolio.DataAccess.Interfaces;
 using Portfolio.Models.Base;
-using System.Linq.Expressions;
+using System.ComponentModel.DataAnnotations;
 
 namespace Portfolio.DataAccess.Repositories
 {
@@ -31,16 +31,16 @@ namespace Portfolio.DataAccess.Repositories
 			return await _context.Set<T>().AsNoTracking().ToListAsync();
 		}
 
-		public async Task<T> FindAsync(object id)
+		public async Task<T> GetByIdAsync(object id)
 		{
 			return await _context.Set<T>().FindAsync(id);
 		}
 
-		#endregion
+        #endregion
 
-		#region Update
+        #region Update
 
-		public void Update(T entity, T oldEntity)
+        public void Update(T entity, T oldEntity)
 		{
 			_context.Entry(oldEntity).CurrentValues.SetValues(entity);
 		}
