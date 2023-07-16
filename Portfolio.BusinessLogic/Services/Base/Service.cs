@@ -6,6 +6,7 @@ using Portfolio.BusinessLogic.Interfaces.Base;
 using Portfolio.DataAccess.UnitOfWork;
 using Portfolio.Models.Base;
 using Portfolio.Utility;
+using System.Security.Principal;
 
 namespace Portfolio.BusinessLogic.Services.Base
 {
@@ -57,30 +58,30 @@ namespace Portfolio.BusinessLogic.Services.Base
 			return new Response<IDTO>(ResponseType.Success, dto);
 		}
 
-		public async Task<IResponse> RemoveAsync(int id)
-		{
-			var data = await _uow.GetRepository<T>().FindAsync(id);
-			if (data == null)
-				return new Response(ResponseType.NotFound, $"Id: {id} is not found");
-			_uow.GetRepository<T>().Remove(data);
-			await _uow.SaveChangesAsync();
-			return new Response(ResponseType.Success);
-		}
-
 		public async Task<IResponse<UpdateDTO>> UpdateAsync(UpdateDTO dto)
 		{
 			var result = _updateDtoValidator.Validate(dto);
 			if (result.IsValid)
 			{
-				var unchangedData = await _uow.GetRepository<T>().FindAsync(dto.Id);
-				if (unchangedData == null)
+				var oldEntity = await _uow.GetRepository<T>().FindAsync(dto.Id);
+				if (oldEntity == null)
 					return new Response<UpdateDTO>(ResponseType.NotFound, $"Id: {dto.Id} is not found");
 				var entity = _mapper.Map<T>(dto);
-				_uow.GetRepository<T>().Update(entity, unchangedData);
+				_uow.GetRepository<T>().Update(entity, oldEntity);
 				await _uow.SaveChangesAsync();
 				return new Response<UpdateDTO>(ResponseType.Success, dto);
 			}
 			return new Response<UpdateDTO>(dto, result.ConvertToCustomValidationError());
 		}
-	}
+
+        public async Task<IResponse> RemoveAsync(int id)
+        {
+            var data = await _uow.GetRepository<T>().FindAsync(id);
+            if (data == null)
+                return new Response(ResponseType.NotFound, $"Id: {id} is not found");
+            _uow.GetRepository<T>().Remove(data);
+            await _uow.SaveChangesAsync();
+            return new Response(ResponseType.Success);
+        }
+    }
 }

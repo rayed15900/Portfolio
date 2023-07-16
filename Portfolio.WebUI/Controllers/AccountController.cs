@@ -2,10 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.BusinessLogic.DTOs.UserDTO;
-using Portfolio.BusinessLogic.Interfaces;
 using Portfolio.Models;
-using Portfolio.WebUI.Extension;
-using static Azure.Core.HttpHeader;
 
 namespace Portfolio.WebUI.Controllers
 {

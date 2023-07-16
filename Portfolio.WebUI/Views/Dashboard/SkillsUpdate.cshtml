@@ -1,0 +1,21 @@
+﻿@using Portfolio.BusinessLogic.DTOs.SkillDTOs;
+@model SkillUpdateDTO
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="header-title">Update Skill</h4>
+        <form asp-controller="Dashboard" asp-action="SkillsUpdate" method="post">
+            <div class="mb-3">
+                <label asp-for="@Model.Name">Name</label>
+                <input class="form-control mt-2" type="text" asp-for="@Model.Name">
+                <span class="text-danger" asp-validation-for="@Model.Name"></span>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-outline-dark">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

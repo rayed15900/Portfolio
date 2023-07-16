@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Portfolio.WebUI.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\rayed\\OneDrive\\Desktop\\Portfolio\\Portfolio.WebUI\\wwwroot\\Icon\\Profile.png",
+      "PackagePath": "staticwebassets\\Icon\\Profile.png"
+    },
+    {
       "Id": "C:\\Users\\rayed\\OneDrive\\Desktop\\Portfolio\\Portfolio.WebUI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

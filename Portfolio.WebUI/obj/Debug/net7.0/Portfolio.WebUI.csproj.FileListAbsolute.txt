@@ -90,3 +90,4 @@ C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\AutoM
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\FluentValidation.dll
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Portfolio.Utility.dll
 C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\bin\Debug\net7.0\Portfolio.Utility.pdb
+C:\Users\rayed\OneDrive\Desktop\Portfolio\Portfolio.WebUI\obj\Debug\net7.0\scopedcss\Views\Shared\_LayoutDashboard.cshtml.rz.scp.css

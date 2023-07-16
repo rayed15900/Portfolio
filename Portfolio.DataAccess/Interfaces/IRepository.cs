@@ -10,6 +10,5 @@ namespace Portfolio.DataAccess.Interfaces
 		Task<T> FindAsync(object id);
 		void Update(T entity, T oldEntity);
 		void Remove(T entity);
-		void RemoveRange(List<T> entities);
 	}
 }

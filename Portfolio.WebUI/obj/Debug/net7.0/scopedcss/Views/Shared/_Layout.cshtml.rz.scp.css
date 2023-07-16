@@ -30,8 +30,12 @@ a[b-qm9wmbc4d5] {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.box-shadow[b-qm9wmbc4d5] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.box-shadow-bottom[b-qm9wmbc4d5] {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.05);
+}
+
+.box-shadow-top[b-qm9wmbc4d5] {
+    box-shadow: 0 -0.25rem 0.75rem rgba(0, 0, 0, 0.05);
 }
 
 button.accept-policy[b-qm9wmbc4d5] {

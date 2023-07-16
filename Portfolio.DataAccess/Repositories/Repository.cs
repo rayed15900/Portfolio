@@ -54,11 +54,6 @@ namespace Portfolio.DataAccess.Repositories
 			_context.Set<T>().Remove(entity);
 		}
 
-		public void RemoveRange(List<T> entities)
-		{
-			_context.Set<T>().RemoveRange(entities);
-		}
-
 		#endregion
 	}
 }

@@ -19,11 +19,11 @@ namespace Portfolio.BusinessLogic.Services
 			_mapper = mapper;
 		}
 
-		public async Task<IResponse<List<SkillListDTO>>> GetAllSkillAsync()
-		{
-			var data = await _uow.GetRepository<Skill>().GetAllAsync();
-			var skills = _mapper.Map<List<SkillListDTO>>(data);
-			return new Response<List<SkillListDTO>>(ResponseType.Success, skills);
-		}
+		//public async Task<IResponse<List<SkillListDTO>>> GetAllSkillAsync()
+		//{
+		//	var data = await _uow.GetRepository<Skill>().GetAllAsync();
+		//	var skills = _mapper.Map<List<SkillListDTO>>(data);
+		//	return new Response<List<SkillListDTO>>(ResponseType.Success, skills);
+		//}
 	}
 }

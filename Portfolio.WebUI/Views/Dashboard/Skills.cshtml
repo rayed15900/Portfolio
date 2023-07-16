@@ -1,0 +1,45 @@
+﻿@using Portfolio.BusinessLogic.DTOs.SkillDTOs;
+@model List<SkillListDTO>
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Skills</h4>
+                <div class="">
+                    @if (Model.Count > 0)
+                    {
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var skill in Model)
+                                {
+                                    <tr>
+                                        <td>@skill.Name</td>
+                                        <td>
+                                            <a class="btn btn-sm btn-primary me-3" href="/Dashboard/SkillsUpdate/@skill.Id">Update</a>
+                                            <a class="btn btn-sm btn-danger" href="/Dashboard/SkillsDelete/@skill.Id">Remove</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <div class="text-secondary">No skills yet</div>
+                    }
+                </div>
+                <a asp-controller="Dashboard" asp-action="SkillsCreate" class="btn btn-outline-dark">Add Skills</a>
+            </div>
+        </div>
+    </div>
+</div>

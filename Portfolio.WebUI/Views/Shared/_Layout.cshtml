@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow-bottom mb-3">
             <div class="container-fluid ms-5 me-5">
                 <a class="navbar-brand fst-italic" asp-controller="Home" asp-action="Index">Portfolio Builder</a>
                 <div class="d-sm-inline-flex justify-content-end">
@@ -34,11 +34,12 @@
         </main>
     </div>
 
-    <footer class="border-top footer">
-        <div class="ms-5">
+    <footer class="border-top footer bg-white box-shadow-top">
+        <div class="ms-5 fst-italic ">
             &copy; 2023 - Portfolio Builder</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

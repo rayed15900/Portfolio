@@ -38,9 +38,22 @@ namespace Portfolio.BusinessLogic.DependencyExtension
             services.AddTransient<IValidator<SkillCreateDTO>, SkillCreateDtoValidator>();
             services.AddTransient<IValidator<SkillUpdateDTO>, SkillUpdateDtoValidator>();
 
-            #region Identity
+			#region Identity
 
-            services.Configure<IdentityOptions>(options =>
+			services.ConfigureApplicationCookie(options =>
+			{
+				options.LoginPath = "/Account/Login";
+				options.LogoutPath = "/Account/Logout";
+				options.SlidingExpiration = true;
+				options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+				options.Cookie = new CookieBuilder
+				{
+					Name = "AuthCookie",
+					HttpOnly = true
+				};
+			});
+
+			services.Configure<IdentityOptions>(options =>
             {
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = false;
@@ -50,19 +63,6 @@ namespace Portfolio.BusinessLogic.DependencyExtension
 
                 options.Lockout.MaxFailedAccessAttempts = 3;
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
-            });
-
-            services.ConfigureApplicationCookie(options =>
-            {
-                options.LoginPath = "/Account/Login";
-                options.LogoutPath = "/Account/Logout";
-                options.SlidingExpiration = true;
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
-                options.Cookie = new CookieBuilder
-                {
-                    HttpOnly = true,
-                    Name = ".Rayed.Security.Cookie"
-                };
             });
 
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<PortfolioContext>().AddDefaultTokenProviders();

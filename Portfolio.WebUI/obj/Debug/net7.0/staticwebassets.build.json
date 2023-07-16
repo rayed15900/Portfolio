@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "b9eAtp8+ZWOxLlnCW2xW4hf+21L+S0/B41Md4Ly6MjM=",
+  "Hash": "dSEglHxPKl8LLtJlqSzOIT+iTEsGdN1bBgdNiT9//WM=",
   "Source": "Portfolio.WebUI",
   "BasePath": "_content/Portfolio.WebUI",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\rayed\\OneDrive\\Desktop\\Portfolio\\Portfolio.WebUI\\wwwroot\\Icon\\Profile.png",
+      "SourceId": "Portfolio.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rayed\\OneDrive\\Desktop\\Portfolio\\Portfolio.WebUI\\wwwroot\\",
+      "BasePath": "_content/Portfolio.WebUI",
+      "RelativePath": "Icon/Profile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Icon\\Profile.png"
     },
     {
       "Identity": "C:\\Users\\rayed\\OneDrive\\Desktop\\Portfolio\\Portfolio.WebUI\\wwwroot\\js\\site.js",

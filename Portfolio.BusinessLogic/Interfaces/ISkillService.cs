@@ -7,6 +7,6 @@ namespace Portfolio.BusinessLogic.Interfaces
 {
 	public interface ISkillService : IService<SkillCreateDTO, SkillUpdateDTO, SkillListDTO, Skill>
 	{
-		Task<IResponse<List<SkillListDTO>>> GetAllSkillAsync();
+		// Task<IResponse<List<SkillListDTO>>> GetAllSkillAsync();
 	}
 }
