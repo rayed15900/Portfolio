@@ -155,6 +155,41 @@ namespace Portfolio.DataAccess.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Portfolio.Models.Education", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("FieldOfStudy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Institution")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LevelOfEducation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Session")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Educations");
+                });
+
             modelBuilder.Entity("Portfolio.Models.Skill", b =>
                 {
                     b.Property<int>("Id")
@@ -298,6 +333,15 @@ namespace Portfolio.DataAccess.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Portfolio.Models.Education", b =>
+                {
+                    b.HasOne("Portfolio.Models.User", null)
+                        .WithMany("Educations")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Portfolio.Models.Skill", b =>
                 {
                     b.HasOne("Portfolio.Models.User", null)
@@ -309,6 +353,8 @@ namespace Portfolio.DataAccess.Migrations
 
             modelBuilder.Entity("Portfolio.Models.User", b =>
                 {
+                    b.Navigation("Educations");
+
                     b.Navigation("Skills");
                 });
 #pragma warning restore 612, 618

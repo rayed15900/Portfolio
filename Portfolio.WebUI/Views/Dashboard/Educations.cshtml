@@ -1,0 +1,47 @@
+﻿@using Portfolio.BusinessLogic.DTOs.EducationDTOs;
+@model List<EducationListDTO>
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Educations</h4>
+                <div class="">
+                    @if (Model.Count > 0)
+                    {
+                        @foreach (var education in Model)
+                        {
+                            <hr />
+                            <div class="row">
+                                <div class="col-8">
+                                    <p><span class="fw-bold">Level of Education:</span> @education.LevelOfEducation</p>
+                                    <p><span class="fw-bold">Institution:</span> @education.Institution</p>
+                                    <p><span class="fw-bold">Field of Study:</span> @education.FieldOfStudy</p>
+                                    <p><span class="fw-bold">Session:</span> @education.Session</p>
+                                </div>
+                                <div class="col-4">
+                                    <a class="btn btn-sm btn-primary me-3" href="/Dashboard/EducationsUpdate/@education.Id">Update</a>
+                                    <a class="btn btn-sm btn-danger" href="/Dashboard/EducationsDelete/@education.Id">Remove</a>
+                                </div>
+                            </div>
+                            
+                        }
+                    }
+                    else
+                    {
+                        <div class="text-secondary mb-2">No education details have been added yet</div>
+                    }
+                </div>
+                <hr class="mt-0"/>
+                <a asp-controller="Dashboard" asp-action="EducationsCreate" class="btn btn-outline-dark mb-3">Add Education</a>
+                @if (TempData["notify"] != null)
+                {
+                    <div class="text-danger text-center" style="font-size: 20px;">@TempData["notify"]</div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,7 +12,7 @@ namespace Portfolio.BusinessLogic.Services
 	{
 		private readonly IMapper _mapper;
 		private readonly IUOW _uow;
-		public SkillService(IUOW uow, IMapper mapper, IValidator<SkillCreateDTO> createDtoValidator, IValidator<SkillUpdateDTO> updateDtoValidator) : base(mapper, uow, createDtoValidator, updateDtoValidator)
+		public SkillService(IUOW uow, IMapper mapper) : base(mapper, uow)
 		{
 			_uow = uow;
 			_mapper = mapper;

@@ -4,10 +4,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Portfolio.BusinessLogic.DTOs.EducationDTOs;
 using Portfolio.BusinessLogic.DTOs.SkillDTOs;
 using Portfolio.BusinessLogic.DTOs.UserDTO;
 using Portfolio.BusinessLogic.Interfaces;
 using Portfolio.BusinessLogic.Services;
+using Portfolio.BusinessLogic.ValidationRules.EducationValidators;
 using Portfolio.BusinessLogic.ValidationRules.SkillValidators;
 using Portfolio.BusinessLogic.ValidationRules.UserValidators;
 using Portfolio.DataAccess.Context;
@@ -30,6 +32,7 @@ namespace Portfolio.BusinessLogic.DependencyExtension
 
             // Services
             services.AddScoped<ISkillService, SkillService>();
+            services.AddScoped<IEducationService, EducationService>();
 
             // Validators
             services.AddTransient<IValidator<UserLoginDTO>, UserLoginDtoValidator>();
@@ -38,9 +41,12 @@ namespace Portfolio.BusinessLogic.DependencyExtension
             services.AddTransient<IValidator<SkillCreateDTO>, SkillCreateDtoValidator>();
             services.AddTransient<IValidator<SkillUpdateDTO>, SkillUpdateDtoValidator>();
 
-			#region Identity
+            services.AddTransient<IValidator<EducationCreateDTO>, EducationCreateDtoValidator>();
+            services.AddTransient<IValidator<EducationUpdateDTO>, EducationUpdateDtoValidator>();
 
-			services.ConfigureApplicationCookie(options =>
+            #region Identity
+
+            services.ConfigureApplicationCookie(options =>
 			{
 				options.LoginPath = "/Account/Login";
 				options.LogoutPath = "/Account/Logout";

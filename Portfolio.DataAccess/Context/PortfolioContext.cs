@@ -12,15 +12,23 @@ namespace Portfolio.DataAccess.Context
 		}
 
         public DbSet<Skill> Skills { get; set; }
+        public DbSet<Education> Educations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
             base.OnModelCreating(modelBuilder);
 
 			modelBuilder.ApplyConfiguration(new SkillConfigurations());
+            modelBuilder.ApplyConfiguration(new EducationConfigurations());
 
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Skills)
+                .WithOne()
+                .HasForeignKey(s => s.UserId)
+                .IsRequired();
+
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Educations)
                 .WithOne()
                 .HasForeignKey(s => s.UserId)
                 .IsRequired();

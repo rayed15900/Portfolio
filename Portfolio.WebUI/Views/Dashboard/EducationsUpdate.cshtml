@@ -1,0 +1,36 @@
+﻿@using Portfolio.BusinessLogic.DTOs.EducationDTOs;
+@model EducationUpdateDTO
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="header-title">Update Education Details</h4>
+        <form asp-controller="Dashboard" asp-action="EducationsUpdate" method="post">
+            <div class="mb-3">
+                <label asp-for="@Model.LevelOfEducation">Level of Education</label>
+                <input class="form-control mt-2" type="text" asp-for="@Model.LevelOfEducation">
+                <span class="text-danger" asp-validation-for="@Model.LevelOfEducation" style="font-size: 14px;"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.Institution">Institution</label>
+                <input class="form-control mt-2" type="text" asp-for="@Model.Institution">
+                <span class="text-danger" asp-validation-for="@Model.Institution" style="font-size: 14px;"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.FieldOfStudy">Field of Study</label>
+                <input class="form-control mt-2" type="text" asp-for="@Model.FieldOfStudy">
+                <span class="text-danger" asp-validation-for="@Model.FieldOfStudy" style="font-size: 14px;"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.Session">Session</label>
+                <input class="form-control mt-2" type="text" asp-for="@Model.Session">
+                <span class="text-danger" asp-validation-for="@Model.Session" style="font-size: 14px;"></span>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-outline-dark">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

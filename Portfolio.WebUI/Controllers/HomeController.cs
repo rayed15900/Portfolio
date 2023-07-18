@@ -6,12 +6,6 @@ namespace Portfolio.WebUI.Controllers
 	{
 		public IActionResult Index()
 		{
-			//var model = new HomeViewModel();
-
-			//var responseSkill = await _skillService.GetAllAsync();
-			//model.Skills = responseSkill.Data;
-
-			//return View(model);
 			return View();
 		}
 	}

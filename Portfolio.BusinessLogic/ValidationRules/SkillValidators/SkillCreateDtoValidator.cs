@@ -7,7 +7,8 @@ namespace Portfolio.BusinessLogic.ValidationRules.SkillValidators
 	{
 		public SkillCreateDtoValidator()
 		{
-			RuleFor(x => x.Name).NotEmpty().WithMessage("Skill name cannot be empty");
+			RuleFor(x => x.Name)
+				.NotEmpty().WithMessage("Skill name required");
 		}
 	}
 }

@@ -9,7 +9,8 @@ namespace Portfolio.BusinessLogic.Helpers
         {
             return new List<Profile>
             {
-                new SkillProfile()
+                new SkillProfile(),
+                new EducationProfile()
             };
         }
     }

@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using FluentValidation;
 using Portfolio.BusinessLogic.DTOs.Interfaces;
 using Portfolio.BusinessLogic.Interfaces.Base;
 using Portfolio.DataAccess.UnitOfWork;
@@ -15,28 +14,19 @@ namespace Portfolio.BusinessLogic.Services.Base
     {
         private readonly IMapper _mapper;
         private readonly IUOW _uow;
-        private readonly IValidator<CreateDTO> _createDtoValidator;
-        private readonly IValidator<UpdateDTO> _updateDtoValidator;
 
-        public Service(IMapper mapper, IUOW uow, IValidator<CreateDTO> createDtoValidator, IValidator<UpdateDTO> updateDtoValidator)
+        public Service(IMapper mapper, IUOW uow)
         {
             _mapper = mapper;
             _uow = uow;
-            _createDtoValidator = createDtoValidator;
-            _updateDtoValidator = updateDtoValidator;
         }
 
         public async Task<CreateDTO> CreateAsync(CreateDTO dto)
         {
-            var result = _createDtoValidator.Validate(dto);
-            if (result.IsValid)
-            {
-                var createdEntity = _mapper.Map<T>(dto);
-                await _uow.GetRepository<T>().CreateAsync(createdEntity);
-                await _uow.SaveChangesAsync();
-                return _mapper.Map<CreateDTO>(createdEntity);
-            }
-            return null;
+            var createdEntity = _mapper.Map<T>(dto);
+            await _uow.GetRepository<T>().CreateAsync(createdEntity);
+            await _uow.SaveChangesAsync();
+            return _mapper.Map<CreateDTO>(createdEntity);
         }
 
         public async Task<List<ListDTO>> GetAllAsync()
@@ -53,28 +43,27 @@ namespace Portfolio.BusinessLogic.Services.Base
             return dto;
         }
 
-        public async Task<UpdateDTO> UpdateAsync(UpdateDTO dto)
+        public async Task<T> UpdateAsync(UpdateDTO dto)
         {
-            var result = _updateDtoValidator.Validate(dto);
-            if (result.IsValid)
+            var oldEntity = await _uow.GetRepository<T>().GetByIdAsync(dto.Id);
+            if (oldEntity != null)
             {
-                var oldEntity = await _uow.GetRepository<T>().GetByIdAsync(dto.Id);
                 var entity = _mapper.Map<T>(dto);
                 _uow.GetRepository<T>().Update(entity, oldEntity);
                 await _uow.SaveChangesAsync();
-                return dto;
             }
-            return null;
+            return oldEntity;
         }
 
-        public async Task<bool> RemoveAsync(int id)
+        public async Task<T> RemoveAsync(int id)
         {
             var data = await _uow.GetRepository<T>().GetByIdAsync(id);
-            if(data == null)
-                return false;
-            _uow.GetRepository<T>().Remove(data);
-            await _uow.SaveChangesAsync();
-            return true;
+            if(data != null)
+            {
+                _uow.GetRepository<T>().Remove(data);
+                await _uow.SaveChangesAsync();
+            }
+            return data;
         }
     }
 }

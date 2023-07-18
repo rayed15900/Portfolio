@@ -12,7 +12,7 @@ namespace Portfolio.BusinessLogic.Interfaces.Base
         Task<CreateDTO> CreateAsync(CreateDTO dto);
         Task<List<ListDTO>> GetAllAsync();
         Task<IDTO> GetByIdAsync<IDTO>(int id);
-        Task<UpdateDTO> UpdateAsync(UpdateDTO dto);
-        Task<bool> RemoveAsync(int id);
+        Task<T> UpdateAsync(UpdateDTO dto);
+        Task<T> RemoveAsync(int id);
     }
 }

@@ -7,5 +7,6 @@ namespace Portfolio.Models
 		public string Name { get; set; }
 
         public ICollection<Skill> Skills { get; set; }
+        public ICollection<Education> Educations { get; set; }
     }
 }
